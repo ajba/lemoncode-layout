@@ -1,0 +1,50 @@
+@import "reset.css";
+
+body{
+    margin-left: 1%;
+    margin-right: 1%;
+    font-family: 'Arial';
+}
+.company-logo{
+    margin: 1% 0 1% 0;
+}
+.menu{
+    display: flex;
+    background-color: teal;
+    color: white;
+    flex-grow: 4;
+}
+
+.menu-section{
+    width: 25%;
+}
+
+a{
+    color: white;
+    text-decoration:none;
+}
+
+@media only screen and (max-width: 600px) {
+    .menu{
+        display: block;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .menu-section{
+        width: 100%;
+    }
+ }
+
+ ul li:hover{
+     background-color: darkslategray;
+     cursor: pointer;
+ }
+
+ li{
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+

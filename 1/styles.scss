@@ -1,0 +1,56 @@
+$baseColor : red;
+$font : Georgia, 'Times New Roman', Times, serif;
+
+body{
+    padding: 10px;
+    background-color: lemonchiffon;
+
+}
+
+.chooseColor{
+    font-family: $font;
+}
+.container-1{
+    display: flex;
+}   
+
+.container-1 > div {
+    display: flex;
+    border : 2px orange solid;
+    width: 100vw;
+    height: 65px;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    font-family: $font;
+    
+}
+
+.base-color {
+    background-color: $baseColor;
+    color: white;
+}
+
+@for $i from 1 through 4 {
+    .darken-#{$i}{
+        background-color: darken($baseColor, $i * 12.5%);
+        color: white;
+    }
+}
+
+@for $i from 1 through 4 {
+
+    @if $i == 4 {
+        .lighten-4{
+            background-color: lighten($baseColor, $i * 12.5%);
+            color: black;
+        }
+    }@else {
+        .lighten-#{$i}{
+            background-color: lighten($baseColor, $i * 12.5%);
+            color: white;
+        }
+    }
+
+    
+}

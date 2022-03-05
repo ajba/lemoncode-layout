@@ -1,0 +1,78 @@
+
+@import "reset.css";
+@import "styles.scss";
+$mainFont : "";
+$borderRadius : "";
+$colourBase : "";
+$colourImportant : "";
+$colourWarning: "";
+$secondFont : "";
+$boxshadow : "";
+
+
+
+@if $themeSelected == 'themeA'{
+    $colourBase : red;
+    $colourImportant : darken($colourBase, 35%);
+    $colourWarning : lighten($colourBase, 35%);
+    $mainFont : 'Arial';
+    $secondFont : 'Courier New';
+    $borderRadius : 0px;
+    $boxshadow : -10px 10px 0px 0px lightgrey
+} @else{
+    $colourBase : blue;
+    $colourImportant : darken($colourBase, 35%);
+    $colourWarning : lighten($colourBase, 35%);
+    $mainFont : 'Verdana, sans-serif';
+    $secondFont : 'Haettenschweiler';
+    $borderRadius : 10px;
+    $boxshadow : 10px 10px 0px 0px lightgrey
+
+}
+
+.app{
+    margin-left: 2%;
+}
+p {
+    font-family: $mainFont;
+}
+.box{
+    font-family: $mainFont;
+    border-radius: $borderRadius;
+    height: 25%;
+    width: 6%;
+    border: 2px solid lightgray;
+    padding: 3%;
+    font-weight: bold;
+}
+
+.box-base{
+    background-color: $colourBase;
+}
+
+.box-important{
+    background-color: $colourImportant;
+}
+
+.box-warning{
+    background-color: $colourWarning;
+}
+
+.box-sha-dow{
+    box-shadow: $boxshadow;
+}
+
+.mainFont{
+    font-family: $mainFont;
+}
+
+.secondaryFont{
+    font-family: $secondFont;
+}
+
+.font-space{
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+
